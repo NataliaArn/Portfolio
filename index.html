@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Natalia Arnandis Alfonso</h1>
+        <p><strong>Junior Web Developer</strong></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#experience-section">Experience</a></li>
+            <li><a href="#education-section">Education</a></li>
+            <li><a href="#contact-section">Meet me</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="projects-section" class="container">
+            <h2>Projects</h2>
+            <article class="flex-container">
+                <div class="left-content">
+                    <div class="left-text">
+                        <img src="/images/WhoIsWho.webp" alt="image of our who is who game" class="small-image">
+                        <div class="text-content">
+                            <h3>WhoIsWho Game</h3>
+                            <p>Developed in collaboration with my mate <a href="https://github.com/alerommic">Alex</a>.</p>
+                            <p>Lint to the repository <a href="https://github.com/NataliaArn/whoiswho">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h3>Coming soon...</h3>
+                </div>
+            </article>
+        </section>
+
+        <section id="experience-section" class="container">
+            <h2>Experience</h2>
+            <article class="flex-container">
+                <div class="left-content">
+                    <h3>Computer Equipment Support Technician</h3>
+                    <p>Intern at the town council of l'Alcúdia in June 2023</p>
+                </div>
+                <div class="right-content">
+                    <h3>Telecommunications Technician</h3>
+                    <p>Training in Working Centers at Moltelecom</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="education-section" class="container">
+            <h2>Education</h2>
+            <article class="flex-container">
+                <div class="left-content">
+                    <h3>Web Applications Developer</h3>
+                    <p>Higher education at the Juan de Garay center</p>
+                </div>
+                <div class="right-content">
+                    <h3>Microcomputer Systems and Networks</h3>
+                    <p>Middle education at the Consuelo de Aranda center</p>
+                </div>
+            </article>
+        </section>
+
+        <aside id="contact-section" class="flex-container">
+            <div class="left-content" id="left-aside">
+                <h2>Contact:</h2>
+                <p>Github: <a href="https://github.com/NataliaArn">NataliaArn</a></p>
+                <p>Email: <a href="mailto:nataliarnanids@gmail.com">nataliarnandis@gmail.com</a></p>
+            </div>
+            <div class="right-content" id="right-aside">
+                <h2>About me:</h2>
+                <p><strong>Personal likes:</strong> I love to be in contact with nature, meditate and positive vibes.
+                </p>
+                <p><strong>Hobbies:</strong> Painting, writing, reading, and really anything creative!</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        This is a work in progress...
+    </footer>
+
+    <script>
+        //gracias a chatGPT por la animación guapa
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                const offsetTop = targetElement.offsetTop;
+
+
+                window.scrollTo({
+                    top: offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
