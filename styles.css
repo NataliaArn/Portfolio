@@ -196,6 +196,15 @@ aside {
     }
 
     #right-aside {
-        order: 2; 
+        order: 2;
+        width: auto; 
+        padding: auto;
+        margin-top: 10px;
+    }
+
+    #left-aside{
+        width: auto;
+        padding: auto;
+        margin-bottom: 10px;
     }
 }
